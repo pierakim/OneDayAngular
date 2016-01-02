@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>One Day Angular</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!-- load angular and angular route via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <link rel="stylesheet" href="style/MailStyle.css" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#controllers"><i class="fa fa-cog fa-spin"></i> Controllers</a></li>
+                    <li><a href="#customButton"><i class="fa fa-play"></i> Controllers</a></li>
+                    <li><a href="#mathService"><i class="fa fa-sort-numeric-asc"></i> Math Service</a></li>
+                    <li><a href="#filters"><i class="fa fa-filter"></i> Filters</a></li>
+                    <li><a href="#basicBinding"><i class="fa fa-exchange"></i> Basic Binding</a></li>
+                    <li><a href="#emailManager"><i class="fa fa-envelope-o"></i> Email Manager</a></li>
+                    <li><a href="#declarativeDomMethod"><i class="fa fa-html5"></i> Declarative DOM Method</a></li>
+                    <li><a href="#expressions"><i class="fa fa-link"></i> Expression</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+        <!--Controller test-->
+        <!--{{ message }}-->
+
+        <!--Templating-->
+        <div ng-view></div>
+
+    </div>
+    <script>
+        // create the module and name it scotchApp
+        // also include ngRoute for all our routing needs
+        var myApp = angular.module('myApp', ['ngRoute']);
+
+        // configure our routes
+        myApp.config(function($routeProvider) {
+            $routeProvider
+
+                // route for the home page
+                    .when('/', {
+                        templateUrl : 'templates/home.html',
+                        controller  : 'mainController'
+                    })
+                // route for the controllers page
+                    .when('/controllers', {
+                        templateUrl: 'templates/controllers.html',
+                    })
+                // route for the custom button page
+                    .when('/customButton', {
+                    templateUrl: 'templates/customButton.html',
+                    })
+                // route for the custom button page
+                    .when('/mathService', {
+                    templateUrl: 'templates/mathService.html',
+                    })
+                // route for the custom button page
+                    .when('/filters', {
+                        templateUrl: 'templates/filters.html',
+                    })
+                // route for the custom button page
+                    .when('/basicBinding', {
+                        templateUrl: 'templates/basicBinding.html',
+                    })
+                // route for the custom button page
+                    .when('/emailManager', {
+                        templateUrl: 'templates/emailManager.html',
+                    })
+                // route for the custom button page
+                    .when('/declarativeDomMethod', {
+                        templateUrl: 'templates/declarativeDomMethod.html',
+                    })
+                // route for the custom button page
+                    .when('/expressions', {
+                        templateUrl: 'templates/expressions.html',
+                    });
+        });
+
+        // create the controller and inject Angular's $scope
+        myApp.controller('mainController', function($scope) {
+            // create a message to display in our view
+            $scope.message = 'Portfolio of Angular Routing.';
+        });
+
+    </script>
+    <script src="javascript/mainControllers.js"></script>
+    <script src="javascript/customButtonDirective.js"></script>
+    <script src="javascript/mathService.js"></script>
+    <script src="javascript/reverseFilter.js"></script>
+    <script src="javascript/filterController.js"></script>
+    <script src="javascript/CtrlBinding.js"></script>
+    <script src="javascript/emailController.js"></script>
+    <script src="javascript/expressionController.js"></script>
+</body>
+</html>

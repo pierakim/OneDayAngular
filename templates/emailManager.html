@@ -1,0 +1,17 @@
+<!-- emailManager.html -->
+<div class="jumbotron text-center">
+    <h1>Declarative Data Binding</h1>
+    <div class="inbox" ng-controller="EmailsCtrl">
+        My Inbox:
+        <ul>
+            <li ng-repeat="message in emails.messages">
+                <p>From: {{ message.from }}</p>
+                <p>Subject: {{ message.subject }}</p>
+                <!--Filter on message date-->
+                <p>{{ message.sent | date:'MMM d, y h:mm:ss a' }}</p>
+                <!--Delete eMail-->
+                <a> <button ng-click="deleteEmail($index)">Delete email</button></a>
+            </li>
+        </ul>
+    </div>
+</div>

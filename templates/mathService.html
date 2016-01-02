@@ -1,0 +1,19 @@
+<!-- controllers.html -->
+<div class="jumbotron text-center">
+    <h1>Math Service</h1>
+
+    Result of Math Service :
+    <div ng-controller="MathCtrl">
+        Multiplication {{a}} x {{b}} = {{ resu }}
+    </div>
+
+    <div ng-controller="MathCtrlFromInput">
+        <input type="number" ng-model="a" placeholder="a" /><br>
+        <input type="number" ng-model="b" placeholder="b" /><br>
+
+        <td><button ng-click="multiply(a,b)">Multiply</button></td>
+        Multiplication {{a}} x {{b}} = {{resu}}
+
+    </div>
+
+</div>

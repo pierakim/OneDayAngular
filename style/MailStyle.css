@@ -1,0 +1,19 @@
+.inbox {
+    font:300 13px/1.4'Helvetica Neue', Helvetica, Arial;
+    background-color: khaki;
+    padding:15px;
+}
+
+.inbox ul {
+    list-style:none;
+    padding:0;
+}
+.inbox ul li {
+    padding:15px;
+    overflow:hidden;
+    background: lightyellow;
+    border-top:1px solid #e5e5e5;
+}
+.inbox ul li:last-child {
+    border-bottom:1px solid #e5e5e5;
+}

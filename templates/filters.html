@@ -1,0 +1,26 @@
+<!-- filters.html -->
+<div class="jumbotron text-center">
+    <h1>Filters</h1>
+    Filters :
+    <!--REVERSE FILTER TEST-->
+    <div ng-controller="ReverseCtrl">
+        Filter : {{ text|reverse }}<br>
+        No Filter : {{ text }}<br>
+        Filter + Uppercase : {{ text|reverse:true }}<br>
+    </div>
+
+    <br>
+
+    <div>Filter in Controller :</div>
+    <div ng-controller="CtrlFltr">
+        <div>Choose your filter :</div>
+        <input type="text" ng-model="lowerBound" />
+        <ul>
+            <li ng-repeat="number in numbers | filter:greaterThanNum">
+                {{ number }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
