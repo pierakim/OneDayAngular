@@ -45,7 +45,7 @@
 
     </div>
     <script>
-        // create the module and name it scotchApp
+        // create the module and name it myApp
         // also include ngRoute for all our routing needs
         var myApp = angular.module('myApp', ['ngRoute']);
 
@@ -53,50 +53,47 @@
         myApp.config(function($routeProvider) {
             $routeProvider
 
-                // route for the home page
                     .when('/', {
                         templateUrl : 'templates/home.html',
                         controller  : 'mainController'
                     })
-                // route for the controllers page
+
                     .when('/controllers', {
                         templateUrl: 'templates/controllers.html',
                     })
-                // route for the custom button page
+
                     .when('/customButton', {
                     templateUrl: 'templates/customButton.html',
                     })
-                // route for the custom button page
+
                     .when('/mathService', {
                     templateUrl: 'templates/mathService.html',
                     })
-                // route for the custom button page
+
                     .when('/filters', {
                         templateUrl: 'templates/filters.html',
                     })
-                // route for the custom button page
+
                     .when('/basicBinding', {
                         templateUrl: 'templates/basicBinding.html',
                     })
-                // route for the custom button page
+
                     .when('/emailManager', {
                         templateUrl: 'templates/emailManager.html',
                     })
-                // route for the custom button page
+
                     .when('/declarativeDomMethod', {
                         templateUrl: 'templates/declarativeDomMethod.html',
                     })
-                // route for the custom button page
+
                     .when('/expressions', {
                         templateUrl: 'templates/expressions.html',
                     })
-                // route for the custom button page
+
                     .when('/ngshow', {
                         templateUrl: 'templates/ngshow.html',
                     });
         });
-
-
 
     </script>
     <script src="javascript/mainCtrl.js"></script>
