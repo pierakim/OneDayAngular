@@ -19,7 +19,7 @@
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                    <a class="navbar-brand" href="/">Angular Routines Examples</a>
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -32,6 +32,7 @@
                     <li><a href="#emailManager"><i class="fa fa-envelope-o"></i> Email Manager</a></li>
                     <li><a href="#declarativeDomMethod"><i class="fa fa-html5"></i> Declarative DOM Method</a></li>
                     <li><a href="#expressions"><i class="fa fa-link"></i> Expression</a></li>
+                    <li><a href="#ngshow"><i class="fa fa-level-up"></i>ng-show ng-hide</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,10 +40,7 @@
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main">
-        <!--Controller test-->
-        <!--{{ message }}-->
 
-        <!--Templating-->
         <div ng-view></div>
 
     </div>
@@ -91,14 +89,14 @@
                 // route for the custom button page
                     .when('/expressions', {
                         templateUrl: 'templates/expressions.html',
+                    })
+                // route for the custom button page
+                    .when('/ngshow', {
+                        templateUrl: 'templates/ngshow.html',
                     });
         });
 
-        // create the controller and inject Angular's $scope
-        myApp.controller('mainController', function($scope) {
-            // create a message to display in our view
-            $scope.message = 'Portfolio of Angular Routing.';
-        });
+
 
     </script>
     <script src="javascript/mainCtrl.js"></script>
@@ -109,5 +107,6 @@
     <script src="javascript/bindingCtrl.js"></script>
     <script src="javascript/emailCtrl.js"></script>
     <script src="javascript/expressionCtrl.js"></script>
+    <script src="javascript/ngshow.js"></script>
 </body>
 </html>

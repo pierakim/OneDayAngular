@@ -1,0 +1,22 @@
+<div class="container" ng-app="showApp" ng-controller="mainController">
+
+    <div class="page-header text-center">
+        <h1>ng-Show / ng-hide</h1>
+    </div>
+
+    <!-- ANIMALS =========================================================== -->
+    <div class="row text-center">
+        <div class="col-xs-6">
+            <!-- change goCats to not true or true -->
+            <a href ng-click="goBieber = !goBieber" class="btn btn-primary btn-lg">Toggle IT</a>
+        </div>
+        <div class="col-xs-6">
+            <iframe src="//giphy.com/embed/zCTyAD1jFhWnu?html5=true&hideSocial=true" width="300" height="300" class="giphy-embed" ng-show="goBieber"></iframe>
+        </div>
+    </div>
+
+</div>
+
+
+
+
